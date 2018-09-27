@@ -1,0 +1,58 @@
+{
+    "author": "lord_havelock",
+    "background": {
+        "page": "lib/chrome/background.html",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "Dark Mode",
+        "default_icon": {
+            "16": "data/icons/dark/16.png",
+            "32": "data/icons/dark/32.png",
+            "48": "data/icons/dark/48.png",
+            "64": "data/icons/dark/64.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "match_about_blank": true,
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_start",
+            "exclude_globs": [
+                "*/chrome/newtab*"
+            ],
+            "js": [
+                "data/content_script/inject.js"
+            ]
+        }
+    ],
+    "description": "A global dark theme for the web",
+    "homepage_url": "http://mybrowseraddon.com/dark-mode.html",
+    "icons": {
+        "16": "data/icons/16.png",
+        "32": "data/icons/32.png",
+        "48": "data/icons/48.png",
+        "64": "data/icons/64.png",
+        "128": "data/icons/128.png"
+    },
+    "manifest_version": 2,
+    "name": "Dark Mode",
+    "options_page": "data/options/options.html",
+    "permissions": [
+        "storage",
+        "<all_urls>",
+        "contextMenus"
+    ],
+    "short_name": "dark-mode",
+    "version": "0.2.8",
+    "web_accessible_resources": [
+        "data/content_script/*.css"
+    ],
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
+}

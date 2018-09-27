@@ -1,0 +1,12 @@
+[
+  {"id": "zip-maker", "title": "ZIP Maker"},
+  {"id": "zip-reader", "title": "ZIP Reader"},
+  {"id": "flag-plus", "title": "Country Flag +"},
+  {"id": "color-picker", "title": "Color Picker"},
+  {"id": "custom-page-zoom", "title": "Custom Page Zoom"},
+  {"id": "useragent-switcher", "title": "User-Agent Switcher"},
+  {"id": "custom-style-script", "title": "Custom Style Script"},
+  {"id": "magnifying-glass", "title": "Magnifying Glass (Hover Zoom)"},
+  {"id": "video-audio-downloader", "title": "Video & Audio Downloader"},
+  {"id": "screen-color-temperature", "title": "Color Temperature (Change Lux)"}
+]
